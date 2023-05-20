@@ -1,0 +1,18 @@
+@import "src/constants/constants.scss";
+
+.benefitsDashboard {
+    .benefitsDashboardList {
+        max-width: 800px;
+        margin: 50px auto;
+        @media only screen and (max-width: $small-media-breakpoint) {
+            margin: 12px;
+            max-width: 100%;
+        }
+        & > div {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
