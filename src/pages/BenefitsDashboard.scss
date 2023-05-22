@@ -8,11 +8,5 @@
             margin: 12px;
             max-width: 100%;
         }
-        & > div {
-            margin-bottom: 10px;
-            &:last-child {
-                margin-bottom: 0px;
-            }
-        }
     }
 }

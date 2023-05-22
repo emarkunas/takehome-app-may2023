@@ -19,13 +19,15 @@ const BenefitsDashboard = () => {
   const [allCompaniesInfoList, setAllCompaniesInfoList] = useState<Company[]>([]);
 
   /**
-   * Load list of companies on initial render
+   * Load list of companies on initial render and set document title (should be moved to router when implemented)
    */
   useEffect(() => {
     if (companiesJSON?.length > 0) {
       // By default sort alphebetically by company name
       setAllCompaniesInfoList(companiesJSON.sort((a, b) => (a?.company_name < b?.company_name ? -1 : 1)));
     }
+
+    document.title = 'My Benefits Dashboard';
   }, []);
 
   return (
