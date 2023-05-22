@@ -6,7 +6,7 @@ import '@fontsource/roboto/700.css';
 // App Styles
 import './App.scss';
 
-import BenefitsDashboard from 'src/pages/BenefitsDashboard';
+import BenefitsDashboard from 'src/pages/BenefitsDashboard/BenefitsDashboard';
 
 function App() {
   return (

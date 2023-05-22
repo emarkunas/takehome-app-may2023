@@ -6,8 +6,8 @@ import { isEmpty } from 'lodash';
 import { COMPANIES_LIST as companiesJSON } from 'src/json/companies';
 
 // Components
-import NoDataContainer from './components/NoDataContainer';
-import CompanyInfoCard from './components/CompanyInfoCard/CompanyInfoCard';
+import NoDataContainer from '../components/NoDataContainer';
+import CompanyInfoCard from '../components/CompanyInfoCard/CompanyInfoCard';
 
 // Types
 import { Company } from 'src/types/companies';
