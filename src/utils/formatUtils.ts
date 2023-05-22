@@ -30,7 +30,7 @@ export const NUMBER_FORMAT_TYPES = Object.freeze({
  * @param toFormat number
  * @returns string formatted list
  */
-export const formatNumber: (number: number, toFormat: keyof typeof NUMBER_FORMAT_TYPES) => string = (
+export const formatNumber: (number: number, toFormat?: keyof typeof NUMBER_FORMAT_TYPES) => string = (
   number,
   toFormat = 'NUMBER'
 ) => {
