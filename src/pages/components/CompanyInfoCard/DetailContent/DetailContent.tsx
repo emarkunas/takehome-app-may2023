@@ -53,6 +53,16 @@ const DetailContent = (props: DetailContentProps) => {
           alignItems: 'center',
           alignContent: 'center',
           justifyContent: 'center',
+          // TODO: Verify with design they want 8px here. Similar designs follow 16px (FAKE comment for illustration purposes)
+          // Note: the only spacing for this component comes from the default 8px padding on the ExpandMore icon button
+          padding: '0',
+          paddingBottom: '0',
+          // Override default MUI CardContent styling because these cards have no Actions, but Collapse
+          // Padding causes jumping when collapsing otherwise
+          // TODO: Note: If design wants the above padding changed, then this should '16px'
+          '&:last-child': {
+            paddingBottom: '0',
+          },
         }}
       >
         <Typography sx={{ color: blue[400] }} align="center" variant="subtitle1">
@@ -62,8 +72,10 @@ const DetailContent = (props: DetailContentProps) => {
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
-          aria-label={expanded ? 'show less' : 'show more'}
-          sx={{ marginLeft: '0' }}
+          aria-label={expanded ? 'hide detailed information' : 'show detailed information'}
+          sx={{
+            marginLeft: '0',
+          }}
         >
           <ExpandMoreIcon sx={{ color: blue[400] }} />
         </ExpandMore>

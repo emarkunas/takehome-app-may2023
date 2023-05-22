@@ -8,7 +8,7 @@ interface CompanyCardSummaryLabelAndValueProps {
 const CompanyCardSummaryLabelAndValue = ({ label = '', value = '' }: CompanyCardSummaryLabelAndValueProps) => (
   <Typography sx={{ display: 'flex', flexDirection: 'column' }} align="center" variant="body1" color="text.primary">
     <span>{label}</span>
-    <span style={{ fontWeight: 700, marginTop: '4px' }}>{value}</span>
+    <span style={{ fontWeight: 700, marginTop: '12px' }}>{value}</span>
   </Typography>
 );
 
