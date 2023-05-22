@@ -21,10 +21,16 @@ interface SummaryContentProps {
 const SummaryContent = (props: SummaryContentProps) => {
   const theme = useTheme();
   const isMinScreenSize = useMediaQuery(theme.breakpoints.down('sm'));
+
+  /**
+   * Get content styling based on screen sizes. Label/Value pairs should
+   * be column orientation in small screen sizes
+   */
   const cardContentStyleObject = useMemo(
     () => (isMinScreenSize ? CARD_CONTENT_MIN_SCREEN : CARD_CONTENT_MEDIUM_AND_UP_SCREEN),
     [isMinScreenSize]
   );
+
   return (
     <CardContent sx={cardContentStyleObject}>
       <CompanyCardSummaryLabelAndValue label={'State'} value={props?.companyState} />

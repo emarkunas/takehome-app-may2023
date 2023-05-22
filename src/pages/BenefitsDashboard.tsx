@@ -15,6 +15,10 @@ import { Company } from 'src/types/companies';
 // Styles
 import './BenefitsDashboard.scss';
 
+/**
+ * Used for displaying list of companies and their benefits information. All
+ * cards have detail containers that are collapsed by default
+ */
 const BenefitsDashboard = () => {
   const [allCompaniesInfoList, setAllCompaniesInfoList] = useState<Company[]>([]);
 
